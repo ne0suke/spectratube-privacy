@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="SpectraTube privacy policy: local audio analysis, local settings, no automatic uploads. 日本語・English"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'"><title>SpectraTube — Privacy Policy / プライバシーポリシー</title><style>
+:root{color-scheme:light}*{box-sizing:border-box}html{scroll-padding-top:20px}body{margin:0;background:#f4f7f8;color:#1f2b34;font:16px/1.85 system-ui,-apple-system,"Segoe UI","Yu Gothic",sans-serif}main{max-width:960px;margin:auto;padding:44px 48px 60px;background:#fff;min-height:100vh}.brand{font-size:20px;font-weight:750;letter-spacing:.02em;color:#124d58;margin:0 0 8px}.intro{font-size:14px;color:#5c6c76;margin:0 0 18px}nav{display:flex;gap:12px;flex-wrap:wrap;border-bottom:1px solid #dce5e9;padding-bottom:24px;margin-bottom:32px}nav a{border:1px solid #c8d9dd;border-radius:6px;padding:5px 16px;text-decoration:none}a{color:#006379;text-underline-offset:3px}a:focus-visible{outline:3px solid #14768c;outline-offset:4px}h1{font-size:28px;line-height:1.45;margin:0 0 22px}h2{font-size:20px;line-height:1.6;margin:34px 0 10px}p{margin:0 0 18px}ul{padding-left:24px}li{margin:8px 0}code{font:14px/1.6 ui-monospace,Consolas,monospace;background:#f0f4f6;padding:2px 5px;border-radius:4px;overflow-wrap:anywhere}article{overflow-wrap:anywhere}article+article{border-top:2px solid #dce5e9;margin-top:56px;padding-top:48px}footer{border-top:1px solid #dce5e9;margin-top:44px;padding-top:20px;color:#5c6c76;font-size:14px}@media(max-width:600px){main{padding:26px 20px 40px}h1{font-size:24px}h2{font-size:18px}body{font-size:15px}code{font-size:13px}}
+</style></head><body><main><header><p class="brand">SpectraTube</p><p class="intro">Privacy Policy / プライバシーポリシー</p><nav aria-label="Language / 言語"><a href="#ja" lang="ja">日本語</a><a href="#en" lang="en">English</a></nav></header><article id="ja" lang="ja"><h1>SpectraTube プライバシーポリシー</h1>
+<p>最終更新日：2026年10月24日</p>
+<p>対象：SpectraTube 1.0.4 の Chrome 拡張機能</p>
+<h2>1. 運営者と目的</h2>
+<p>SpectraTube の開発者（以下「開発者」）は、YouTube / YouTube Music で再生される音声の周波数スペクトルを表示するために、本拡張機能を提供しています。プライバシーに関する連絡先は <a href="mailto:kneo3151@gmail.com">kneo3151@gmail.com</a> です。</p>
+<h2>2. 端末内で扱う情報</h2>
+<p>本拡張機能は、機能の提供に必要な範囲で、次の情報を利用者の端末内で処理します。</p>
+<ul><li>利用者が開始した解析対象タブ・メディアの音声信号と、そこから算出した周波数帯ごとのレベル。</li><li>再生中のメディアの有無、音量、ミュート、再生状態、メディアソースを識別するための情報。</li><li>対応ページ・解析対象タブを判定し、ページ移動時に表示を復元したり解析を停止したりするためのタブ識別子とURL。</li><li>ボタンやパネルを配置するための、対応ページのプレーヤー・操作欄などのページ構造と表示サイズ。</li><li>設定の変更、ホバー表示、設定ボタンの自動非表示に必要なクリック・ポインター移動・ホイール・キーボード操作のイベント。これらを操作履歴として記録したり、利用状況の追跡に用いたりしません。</li></ul>
+<p>音声解析は端末内で行います。タブ音声の取得方式では、選択したタブで鳴る音声を解析対象とします。音声信号や周波数データを音声ファイルとして録音・保存せず、外部のサーバーへ送信しません。マイクやカメラから音声・映像を取得しません。</p>
+<h2>3. 保存する情報と保存期間</h2>
+<p>色、表示感度、配置、濃さ、ホイールの向きなどの表示設定を <code>chrome.storage.local</code> に保存します。YouTube と YouTube Music の設定は別々に保存します。旧バージョンの設定が移行用に残る場合があります。これらは変更、ブラウザー側での消去、または拡張機能のアンインストールまで保存されます。本拡張機能は <code>chrome.storage.sync</code> による同期を行いません。</p>
+<p>解析対象タブの識別子など、開始済みの解析を管理・復元するための最小限の状態を <code>chrome.storage.session</code> と実行中のメモリーに保持します。停止・タブの終了などに応じて解析状態を解放し、ブラウザーセッション終了時にはセッション用の保存領域もブラウザーにより消去されます。</p>
+<p>解析用の一時バッファーを除き、音声信号、周波数レベルの時系列、閲覧履歴の一覧、操作履歴は永続保存しません。</p>
+<h2>4. 開始・停止と利用者の選択</h2>
+<p>解析は、ページ内の SpectraTube ボタンまたは拡張機能アイコンを使った利用者の開始操作を起点とします。開始済みのタブでは、曲の切り替えやページの再読み込み後に解析を継続・復元することがあります。</p>
+<p>スペアナ表示中の「×」、ページ内ボタン、または拡張機能アイコンで解析を停止できます。設定画面を開いている間の「×」は、解析を停止せず設定画面だけを閉じます。拡張機能を無効化・アンインストールすることでも利用を終了できます。保存した設定を削除するには、本拡張機能をアンインストールするか、ブラウザーが提供する拡張機能データの消去手段を利用してください。</p>
+<h2>5. 開発者への送信・第三者提供</h2>
+<p>本拡張機能には、処理した音声、ページ情報、URL、設定、操作イベントを開発者や外部サーバーへ自動送信する機能はありません。広告配信、アクセス解析、利用状況の追跡、ユーザーデータの販売・広告目的での共有は行いません。</p>
+<p>機能を利用するためのアカウント登録は不要です。氏名、メールアドレス、パスワード、認証Cookie、決済情報を本拡張機能が収集する機能はありません。</p>
+<p>本拡張機能によるユーザーデータの利用は、Chrome ウェブストアのユーザーデータポリシーおよび Limited Use の要件に従い、説明したスペクトル表示機能の提供に限定します。</p>
+<h2>6. お問い合わせ</h2>
+<p>利用者が <a href="mailto:kneo3151@gmail.com">kneo3151@gmail.com</a> に自らメールを送った場合、開発者はメールアドレス、本文、利用者が添付した情報を受け取ります。これらは返信、不具合の調査、依頼への対応に必要な範囲で使用・保管し、不要になった情報は削除します。メールの削除についても同じ連絡先へお問い合わせください。</p>
+<p>メールの送受信にはメールサービス提供者の仕組みが使われ、その処理には当該提供者の規定も適用されます。本拡張機能からメールや診断データが自動送信されることはありません。</p>
+<h2>7. 他のサービスとの関係</h2>
+<p>YouTube、YouTube Music、Chrome、Chrome ウェブストア、および本ポリシーの公開先による独自のデータ処理には、それぞれの提供者のプライバシーポリシーが適用されます。本ポリシーは、それらのサービス自身による収集や、本ポリシーを閲覧した際に公開先が処理するアクセス情報を管理するものではありません。</p>
+<h2>8. ポリシーの変更と連絡先</h2>
+<p>機能や情報の取り扱いに変更があった場合は、本ポリシーを更新し、必要な説明を行います。最新の更新日はこのページの冒頭に記載します。</p>
+<p>連絡先：<a href="mailto:kneo3151@gmail.com">kneo3151@gmail.com</a></p></article><article id="en" lang="en"><h1>SpectraTube Privacy Policy</h1>
+<p>Last updated: October 24, 2026</p>
+<p>Applies to: SpectraTube Chrome extension, version 1.0.4</p>
+<h2>1. Developer and purpose</h2>
+<p>The developer of SpectraTube (the “Developer”) provides this extension to display the frequency spectrum of audio playing on YouTube and YouTube Music. For privacy inquiries, contact <a href="mailto:kneo3151@gmail.com">kneo3151@gmail.com</a>.</p>
+<h2>2. Information processed on your device</h2>
+<p>The extension processes the following information locally, only as needed to provide its features:</p>
+<ul><li>Audio signals from the tab or media selected through your start action, and the frequency-band levels derived from those signals.</li><li>Media availability, volume, mute and playback state, and information needed to identify the current media source.</li><li>Tab identifiers and URLs used to recognize supported pages and the selected tab, restore the display after navigation, or stop analysis when appropriate.</li><li>The structure and display dimensions of supported pages' players and playback controls, used to position the spectrum and its buttons.</li><li>Click, pointer movement, wheel and keyboard events needed to change settings, show controls on hover, and hide the settings button when idle. These events are not recorded as an interaction history or used to track usage.</li></ul>
+<p>Audio analysis takes place on your device. The tab-capture method analyzes audio playing within the selected tab. The extension does not create or save audio recordings or transmit audio signals or spectrum data to external servers. It does not capture audio or video from your microphone or camera.</p>
+<h2>3. Storage and retention</h2>
+<p>Display preferences, such as color, sensitivity, placement, opacity and wheel direction, are saved in <code>chrome.storage.local</code>. YouTube and YouTube Music have separate preferences. Legacy settings may be retained for migration. Preferences remain until changed, cleared using browser-provided controls, or removed when the extension is uninstalled. The extension does not sync data through <code>chrome.storage.sync</code>.</p>
+<p>Minimal state needed to manage or restore an analysis session, including the selected tab identifier, is kept in <code>chrome.storage.session</code> and runtime memory. Analysis resources are released when analysis stops or the tab closes, as appropriate. The browser also clears session storage when the browser session ends.</p>
+<p>Apart from temporary analysis buffers, audio signals, spectrum histories, lists of browsing history and interaction histories are not persistently stored.</p>
+<h2>4. Starting, stopping and your choices</h2>
+<p>Analysis is initiated by your action on the SpectraTube page button or extension toolbar icon. Once you have started analysis in a tab, the extension may continue or restore it when the song changes or the page reloads.</p>
+<p>To stop analysis, use <strong>×</strong> in the spectrum view, the page button, or the toolbar icon. While settings are open, <strong>×</strong> only closes settings and does not stop analysis. You can also disable or uninstall the extension. To remove saved preferences, uninstall the extension or use browser-provided controls for clearing extension data.</p>
+<h2>5. Transmission to the Developer and third-party sharing</h2>
+<p>The extension has no feature that automatically sends processed audio, page information, URLs, preferences or interaction events to the Developer or external servers. It does not serve advertisements, include analytics, track usage, sell user data, or share user data for advertising.</p>
+<p>No account is required. The extension has no feature for collecting your name, email address, passwords, authentication cookies or payment information.</p>
+<p>SpectraTube's use of user data follows the Chrome Web Store User Data Policy and its Limited Use requirements and is restricted to providing the disclosed spectrum-display functionality.</p>
+<h2>6. Support emails</h2>
+<p>If you choose to email <a href="mailto:kneo3151@gmail.com">kneo3151@gmail.com</a>, the Developer receives your email address, message and any information you attach. This information is used and retained as needed to reply, investigate the issue or fulfill your request. Information that is no longer needed is deleted. You may request deletion by contacting the same address.</p>
+<p>Email is processed through email service providers, whose terms also apply to their processing. The extension does not automatically send emails or diagnostic reports.</p>
+<h2>7. Other services</h2>
+<p>YouTube, YouTube Music, Chrome, the Chrome Web Store and the service hosting this policy have their own privacy policies for their independent data processing. This policy does not control their own collection practices or access information processed by the host when you view this policy.</p>
+<h2>8. Changes and contact</h2>
+<p>If features or data practices change, this policy will be updated and any necessary disclosures will be provided. The latest revision date appears at the top of this page.</p>
+<p>Contact: <a href="mailto:kneo3151@gmail.com">kneo3151@gmail.com</a></p></article><footer>Contact / お問い合わせ：<a href="mailto:kneo3151@gmail.com">kneo3151@gmail.com</a></footer></main></body></html>
